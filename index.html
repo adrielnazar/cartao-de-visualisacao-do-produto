@@ -1,36 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root {
+      --fonte2:'Montserrat', cursive;
+      --fonte1:'Fraunces', cursive;
+    }
+
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-color: hsl(30, 38%, 92%);
+    }
+
+    main {
+      background-color: white;
+      min-width: 300px;
+      max-width: 514px;
+      margin: auto;
+      margin-top: 15vh;
+      padding: 30px;
+      border-radius: 10px;
+      border: 50px;
+      font-family: var(--fonte2);
+      font-size: 14px;
+      color: hsl(228, 12%, 48%);
+
+    }
+
+    div {
+      display: inline-block;
+      width: 50%;
+      margin-left: 40px;
+    }
+
+
+    main img {
+      display: inline-block;
+      width: 50%;
+      margin: -30px -30px -33px -30px;
+      border-radius: 10px 0px 0px 10px;
+    }
+
+    h1 {
+      font-family: var(--fonte1);
+      color: hsl(212, 21%, 14%);
+      line-height: 1;
+      
+    }
+
+    h1, h2, p, a {
+      margin-bottom: 18px;
+    }
+
+    #preco {
+      font-family: var(--fonte1);
+      color: #458C6B;
+      font-size: 2em;
+    }
+
+
+    main a {
+      margin: auto;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      background-color: #458C6B;
+      padding: 14px 25%;
+      border-radius: 10px;
+    }
+
+
+    a > img {
+      display: inline-block;
+      padding: 7px 7px;
+      margin: -20px -12px -12px -10px ;
+      width: 18px;
+      height: 18px;
+    }
+
+    div > a:hover {
+      background-color: #1A4031;
+    }
+
+
   </style>
 </head>
+
 <body>
+  <header>
+  </header>
 
-  Preview
+  <main>
+    
+      <picture>
+        <source id="pequeno" media="(max-width: 576px)" srcset="images/image-product-mobile.jpg" type="image/jpeg">
+        <img id="grande" src="images/image-product-desktop.jpg" alt="Imagen do produto">
+      </picture>
+    
+    <div>
+      
+      <h2>Perfume</h2>
+      <h1>Gabrielle <br>Essence Eau De <br>Parfum</h1>
+      <p>
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <p><strong id="preco">$149.99</strong>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small><s>$169.99</s></small>
+      </p>
+      <br><a href="#"><img src="images/icon-cart.svg">&nbsp;&nbsp;&nbsp;&nbsp;Add to Cart</a>
+    </div>
+  </main>
 
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Adriel Nazar Santos</a>.
+    </p>
+</footer>
 </body>
 </html>
