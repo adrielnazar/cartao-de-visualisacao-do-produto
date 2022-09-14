@@ -31,38 +31,27 @@
 
     main {
       background-color: white;
-      min-width: 300px;
-      max-width: 514px;
-      margin: auto;
-      margin-top: 15vh;
-      padding: 30px;
       border-radius: 10px;
       border: 50px;
       font-family: var(--fonte2);
       font-size: 14px;
       color: hsl(228, 12%, 48%);
-
+      overflow: hidden;
     }
 
-    div {
-      display: inline-block;
-      width: 50%;
-      margin-left: 40px;
-    }
-
-
-    main img {
-      display: inline-block;
-      width: 50%;
-      margin: -30px -30px -33px -30px;
-      border-radius: 10px 0px 0px 10px;
+    div#text {
+      position: absolute;
+      margin: 20px 0px 0px 10px;
     }
 
     h1 {
       font-family: var(--fonte1);
       color: hsl(212, 21%, 14%);
       line-height: 1;
-      
+    }
+
+    h2 {
+      font-size: 0.9em;
     }
 
     h1, h2, p, a {
@@ -75,31 +64,82 @@
       font-size: 2em;
     }
 
-
     main a {
       margin: auto;
       text-decoration: none;
       font-weight: bold;
       color: white;
       background-color: #458C6B;
-      padding: 14px 25%;
+      padding: 14px 22%;
       border-radius: 10px;
     }
 
 
     a > img {
       display: inline-block;
-      padding: 7px 7px;
-      margin: -20px -12px -12px -10px ;
+      margin: 0px -5px -5px -5px ;
       width: 18px;
-      height: 18px;
     }
 
     div > a:hover {
       background-color: #1A4031;
     }
 
+    @media screen and (max-width: 510px){
+      
+      main {
+        width: 340px;
+        height: 590px;
+        margin: auto;
+        margin-top: 15px;
+      }
 
+      main a {
+        padding: 14px 28%;
+      }
+
+      div {
+        width: 308px;
+      }
+      
+      div#imagem {
+        background: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        width: 350px;
+        height: 245px;
+      }
+
+      div#text {
+        margin-left: 30px;
+      }
+      
+    }
+
+    @media screen and (min-width: 510px){
+
+      main {
+        
+        width: 514px;
+        height: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      
+      div {
+        display: inline-block;
+        width: 49%;
+      }
+
+      div#imagem{
+      height: 350px;
+      background: black url(images/image-product-desktop.jpg) no-repeat;
+      background-size: cover;
+      }
+      
+    }
   </style>
 </head>
 
@@ -109,14 +149,12 @@
 
   <main>
     
-      <picture>
-        <source id="pequeno" media="(max-width: 576px)" srcset="images/image-product-mobile.jpg" type="image/jpeg">
-        <img id="grande" src="images/image-product-desktop.jpg" alt="Imagen do produto">
-      </picture>
+    <div id="imagem">
+    </div>
     
-    <div>
+    <div id="text">
       
-      <h2>Perfume</h2>
+      <h2>P E R F U M E</h2>
       <h1>Gabrielle <br>Essence Eau De <br>Parfum</h1>
       <p>
         A floral, solar and voluptuous interpretation composed by Olivier Polge,
